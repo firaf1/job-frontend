@@ -35,10 +35,7 @@
               class="utf-intro-search-field-item"
               style="width: 100%; height: 100%; shadow: none"
             >
-              <select
-                class="selectpicker1 default"
-                style="width: 100%; height: 100%"
-              >
+              <select class="selectpicker1 default" style="width: 100%; height: 100%">
                 <option>Afghanistan</option>
                 <option>Albania</option>
                 <option>Algeria</option>
@@ -62,8 +59,8 @@
           </div>
           <p class="utf-trending-silver-item">
             <span class="utf-trending-black-item">Trending Jobs Keywords:</span>
-            Web Designer, Web Developer, Graphic Designer, PHP Developer, IOS
-            Developer, Android Developer
+            Web Designer, Web Developer, Graphic Designer, PHP Developer, IOS Developer,
+            Android Developer
           </p>
         </div>
       </div>
@@ -79,9 +76,7 @@
               <div class="utf-quote-box utf-jobs-listing-utf-quote-box">
                 <div class="utf-quote-info">
                   <h4>Make a Difference with Online Resume!</h4>
-                  <p>
-                    Your Resume in Minutes with Jobs Resume Assistant is Ready!
-                  </p>
+                  <p>Your Resume in Minutes with Jobs Resume Assistant is Ready!</p>
                   <a
                     href="register.html"
                     class="button utf-ripple-effect-dark utf-button-sliding-icon margin-top-0"
@@ -261,9 +256,7 @@
 
             <div class="utf-sidebar-widget-item">
               <div class="utf-detail-banner-add-section">
-                <a href="#"
-                  ><img src="images/banner-add-2.jpg" alt="banner-add-2"
-                /></a>
+                <a href="#"><img src="images/banner-add-2.jpg" alt="banner-add-2" /></a>
               </div>
             </div>
           </div>
@@ -272,8 +265,7 @@
         <div class="col-xl-9 col-lg-8">
           <div class="utf-inner-search-section-title">
             <h4>
-              <i class="icon-material-outline-search"></i> Search Jobs Listing
-              Results
+              <i class="icon-material-outline-search"></i> Search Jobs Listing Results
             </h4>
           </div>
           <div class="utf-notify-box-aera margin-top-15">
@@ -291,9 +283,7 @@
             </div>
           </div>
 
-          <div
-            class="utf-listings-container-part compact-list-layout margin-top-35"
-          >
+           <div class="utf-listings-container-part compact-list-layout margin-top-35">
             <div class="loading" v-if="isLoading">
               <div class="skeleton row">
                 <div
@@ -311,87 +301,43 @@
                 </div>
               </div>
 
-                  <div class="skeleton row" >
-	  	<div class="skeleton-left flex1 col-3" style="width:5rem; overflow:hidden;">
-	      <div class="square circle"></div>
-	    </div>
- 
-  	    <div class="skeleton-right flex2 col-9">
-			<div class="line h17 w40 m10"></div>
-			<div class="line"></div>
-		 
-			<div class="line  w75"></div>
-	    </div>
-  </div>
+              <div class="skeleton row">
+                <div
+                  class="skeleton-left flex1 col-3"
+                  style="width: 5rem; overflow: hidden"
+                >
+                  <div class="square circle"></div>
+                </div>
+
+                <div class="skeleton-right flex2 col-9">
+                  <div class="line h17 w40 m10"></div>
+                  <div class="line"></div>
+
+                  <div class="line w75"></div>
+                </div>
+              </div>
             </div>
 
-            <a v-else
-              
-              href="single-job-page.html"
-              v-for="job in jobs"
+          <div class="" v-else>
+          <jobs_list   v-for="job in jobs"
               :key="job.id"
-              class="utf-job-listing"
-            >
-              <div class="utf-job-listing-details">
-                <div class="utf-job-listing-company-logo">
-                  <img :src="job.company_image" alt="" />
-                </div>
-                <div class="utf-job-listing-description">
-                  <span
-                    class="dashboard-status-button utf-job-status-item green"
-                    ><i class="icon-material-outline-business-center"></i> Full
-                    Time</span
-                  >
-                  <h3 class="utf-job-listing-title">
-                    {{ job.title }}
-                    <span
-                      class="utf-verified-badge"
-                      title="Verified Employer"
-                      data-tippy-placement="top"
-                    ></span>
-                  </h3>
-                  <div class="utf-job-listing-footer">
-                    <ul>
-                      <li>
-                        <i class="icon-feather-briefcase"></i
-                        >{{ job.category_name }}
-                      </li>
-                      <li>
-                        <i
-                          class="icon-material-outline-account-balance-wallet"
-                        ></i
-                        >{{ job.salary }} -Birr
-                      </li>
-                      <li>
-                        <i class="icon-material-outline-location-on"></i>
-                        {{ job.address }}
-                      </li>
-                      <li>
-                        <i class="icon-material-outline-access-time"></i>
-                        {{ ChangeToMoment(job.created_at)  }}
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <span class="bookmark-icon"></span>
-              </div>
-            </a>
+              
+               :jobs1="{job}"/>
           </div>
+          </div>
+
+  
 
           <!-- Pagination -->
           <div class="clearfix"></div>
           <div class="row">
             <div class="col-md-12">
-              <div
-                class="utf-pagination-container-aera margin-top-30 margin-bottom-60"
-              >
+              <div class="utf-pagination-container-aera margin-top-30 margin-bottom-60">
                 <nav class="pagination">
                   <ul>
                     <li class="utf-pagination-arrow">
                       <a href="#"
-                        ><i
-                          class="icon-material-outline-keyboard-arrow-left"
-                        ></i
+                        ><i class="icon-material-outline-keyboard-arrow-left"></i
                       ></a>
                     </li>
                     <li><a href="#" class="current-page">1</a></li>
@@ -399,9 +345,7 @@
                     <li><a href="#">3</a></li>
                     <li class="utf-pagination-arrow">
                       <a href="#"
-                        ><i
-                          class="icon-material-outline-keyboard-arrow-right"
-                        ></i
+                        ><i class="icon-material-outline-keyboard-arrow-right"></i
                       ></a>
                     </li>
                   </ul>
@@ -439,9 +383,7 @@
                       placeholder="Enter your email"
                       required=""
                     />
-                    <button class="utf_theme_btn" type="submit">
-                      Subscribe
-                    </button>
+                    <button class="utf_theme_btn" type="submit">Subscribe</button>
                   </form>
                 </div>
               </div>
@@ -468,47 +410,53 @@
 </template>
 
 <script>
-import 'jquery'
-import moment from 'moment';
- 
+import "jquery";
+import moment from "moment";
+import jobs_list from '~/components/job/jobs_list.vue';
+
 export default {
-  layout: 'app_layout',
+  components: { jobs_list },
+  layout: "app_layout",
   head() {
     return {
       script: [],
-    }
+    };
   },
   data() {
     return {
       jobs: [],
       categories: [],
       isLoading: false,
-    }
+    };
   },
   activated() {
+   this.$auth.$storage.getLocalStorage('user')
     // Call fetch again if last fetch more than 30 sec ago
     if (this.$fetchState.timestamp <= Date.now() - 30000) {
-      this.$fetch()
+      this.$fetch();
     }
   },
   async fetch() {
-    this.isLoading = true
-    this.jobs = await fetch('https://job.habeshawimart.com/api/all-jobs').then(
-      (res) => res.json()
-    )
+   
+    this.isLoading = true;
+    this.jobs = await fetch("https://job.habeshawimart.com/api/all-jobs").then((res) =>
+      res.json()
+    );
     this.categories = await fetch(
-      'https://job.habeshawimart.com/api/all-jobs-category'
-    ).then((res) => res.json())
-    this.isLoading = false
+      "https://job.habeshawimart.com/api/all-jobs-category"
+    ).then((res) => res.json());
+    this.isLoading = false;
   },
   methods: {
-    ChangeToMoment(created_at){
-var creat = moment(created_at).fromNow() 
-return creat;
-    }
+    ChangeToMoment(created_at) {
+      var creat = moment(created_at).fromNow();
+      return creat;
+    },
   },
-  beforeMount() {},
-}
+  beforeMount() {
+  
+  },
+};
 </script>
 
 <style>
@@ -568,7 +516,6 @@ return creat;
 }
 
 .skeleton-left {
-   
   overflow: hidden;
 }
 

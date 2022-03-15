@@ -253,7 +253,7 @@
                 >Forgot Password?</a
               >
             </form>
-            <button
+            <button @click="userLogin"
               class="button full-width utf-button-sliding-icon ripple-effect"
               type="submit"
               form="login-form"
@@ -387,7 +387,7 @@ import Latest from '~/components/latest.vue';
 import Testimonials from '~/components/testimonials.vue';
 import Support from '~/components/support.vue';
 import Award from '~/components/award.vue';
- 
+ import { mapMutations } from 'vuex'
  
 export default {
   components: { top_header, Banner,Latest,Award, Testimonials, Support, },
@@ -396,6 +396,18 @@ export default {
     
     layout: 'app_layout',
   // css: ['~/assets/css/bootstrap-grid.css', '~/assets/css/style.css'],
+  data() {
+    return {
+       
+      login: {
+        email: 'feraolbiru@gmail.com',
+        password: 'password'
+      }
+    }
+  },
+  mounted() {
+ 
+  },
   head() {
     return {
       script: [
@@ -405,6 +417,36 @@ export default {
       ],
     }
   },
+
+   methods: {
+ 
+    async userLogin() {
+      
+      try {
+        
+        // let response = await this.$auth.loginWith('local', { data: this.login })
+ 
+
+       let response = await this.$axios.$post('login-request', this.login )
+        // this.$auth.$storage.setUniversal('user', response.user, true)
+        console.log(response)
+this.$auth.$storage.setLocalStorage('email', response.email)
+this.$auth.$storage.setLocalStorage('token', response.token)
+this.$auth.$storage.setLocalStorage('name', response.name)
+this.$auth.$storage.setLocalStorage('profile', response.image_path)
+
+this.$store.commit('addOne/setLogin')
+   
+
+} catch (err) {
+        console.log("error while fetching.....")
+      }
+    },
+     logout(state) {
+    window.localStorage.clear()
+    state.isLoggedIn = false;
+  }
+  }
   
     
 }

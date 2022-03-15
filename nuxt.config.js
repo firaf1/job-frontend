@@ -8,6 +8,7 @@ export default {
  
     mode: 'out-in'
   },
+ 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'nuxt_app',
@@ -70,12 +71,37 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxtjs/auth-next'
+
   ],
+  auth: {
+    strategies: {
+      local: {
+        token: {
+          property: 'token',
+          global: true,
+          required: true,
+          type: 'Bearer'
+        },
+    
+        user: {
+          property: 'user',
+          autoFetch: true
+        },
+        endpoints: {
+          login: { url: 'login-request', method: 'post' },
+          logout: { url: '/api/auth/logout', method: 'post' },
+          user: { url: 'auth/user', method: 'get' }
+        }
+      }
+    },
+    
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '/',
+    baseURL: 'https://job.habeshawimart.com/api/',
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa

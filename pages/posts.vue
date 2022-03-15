@@ -1,6 +1,8 @@
 <template>
-  <div v-if="loading" class="loading-page">
+  <div  class="loading-page">
     <p>Loading...</p>
+    <h2>  Counter: {{  this.$store.state.addOne.count }} </h2>
+    <button @click="add" >Add 1</button>
   </div>
 </template>
 <script>
@@ -10,6 +12,9 @@
       loading: false
     }),
     methods: {
+      add(){
+this.$store.commit('addOne/increament')
+      },
       start() {
         console.log('starting......')
         this.loading = true
