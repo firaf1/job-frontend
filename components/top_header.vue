@@ -24,7 +24,7 @@
 
             <div class="utf-right-side" >
 
-              <div class="utf-header-widget-item" v-if="!this.$store.state.addOne.isLoging">
+              <div class="utf-header-widget-item" v-if="!(this.$store.state.addOne.isLoging)">
                 <a
                   href="#utf-signin-dialog-block"
                   class="popup-with-zoom-anim log-in-button"
@@ -33,15 +33,15 @@
               </div>
 
               <div class="utf-header-widget-item" v-else>
-                <div class="utf-header-notifications user-menu ">
+                <div class="utf-header-notifications user-menu  " id="isDroped">
                   <div
-                    class="utf-header-notifications-trigger user-profile-title"
+                    class="utf-header-notifications-trigger user-profile-title" @click="togleMenu()"
                   >
                     <a href="#">
                       <div class="user-avatar status-online">
-                        <img :src="userProfile" alt="" style="width:100%; height:100"/>
+                        <img :src="this.$store.state.addOne.profile" alt="" style="width:100%; height:100"/>
                       </div>
-                      <div class="user-name" style=" text-transform: capitalize; " >  {{ userName }} </div>
+                      <div class="user-name" style=" text-transform: capitalize; " >  {{ this.$store.state.addOne.fullName }} </div>
                     </a>
                   </div>
                   <div class="utf-header-notifications-dropdown-block">
@@ -76,7 +76,7 @@
                         >
                       </li>
                       <li>
-                        <a href="index-1.html"
+                        <a href="#" @click="logout()"
                           ><i
                             class="icon-material-outline-power-settings-new"
                           ></i>
@@ -121,6 +121,7 @@ export default {
   // },
     data() {
     return {
+      isMenuShow: false,
       isLoging2:false,
       userName:"ff",
       userToken:"",
@@ -128,10 +129,35 @@ export default {
       
     }
   },
+  methods: {
+    logout(){
+  localStorage.removeItem('auth.name');
+  localStorage.removeItem('auth.token');
+  localStorage.removeItem('auth.name');
+  localStorage.removeItem('auth.profile');
+  localStorage.removeItem('auth.email');
+ 
+this.$store.commit('addOne/setLogin')
+    },
+    togleMenu(){
+      if(this.isMenuShow){
+        var element = document.getElementById("isDroped");
+  element.classList.remove("active");
+  this.isMenuShow = false
+ 
+      }
+      else{
+      var element = document.getElementById("isDroped");
+        element.classList.add("active");
+        this.isMenuShow = true
+        
+      }
+    }
+  },
   async beforeMount() {
     // this.isLoging2 = this.$store.dispatch('getisLogin')
-    
-    console.log('mounting..............f')
+    console.log(this.$store.state.addOne.isLoging)
+    this.$store.commit('addOne/setLogin')
      
       // this.$store.dispatch('getisLogin')
  
