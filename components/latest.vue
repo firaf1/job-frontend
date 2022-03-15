@@ -18,288 +18,50 @@
                   since when unknown printer took a galley.
                 </p>
               </div>
-              <div
-                class="utf-listings-container-part compact-list-layout margin-top-35"
-              >
-                <a
-                  href="single-job-page.html"
-                  class="utf-job-listing utf-apply-button-item"
+             <div class="utf-listings-container-part compact-list-layout margin-top-35">
+            <div class="loading" v-if="isLoading">
+              <div class="skeleton row">
+                <div
+                  class="skeleton-left flex1 col-3"
+                  style="width: 5rem; overflow: hidden"
                 >
-                  <div class="utf-job-listing-details">
-                    <div class="utf-job-listing-company-logo">
-                      <img src="~/assets/images/company_logo_1.png" alt="" />
-                    </div>
-                    <div class="utf-job-listing-description">
-                      <span
-                        class="dashboard-status-button utf-job-status-item green"
-                        ><i class="icon-material-outline-business-center"></i>
-                        Full Time</span
-                      >
-                      <h3 class="utf-job-listing-title">
-                        Web Designer, Graphic Designer, UI/UX Designer & Art
-                      </h3>
-                      <div class="utf-job-listing-footer">
-                        <ul>
-                          <li>
-                            <i class="icon-feather-briefcase"></i> Graphic
-                            Designer
-                          </li>
-                          <li>
-                            <i
-                              class="icon-material-outline-account-balance-wallet"
-                            ></i>
-                            $35000-$38000
-                          </li>
-                          <li>
-                            <i class="icon-material-outline-location-on"></i>
-                            Drive Potsdam, NY 676
-                          </li>
-                          <li>
-                            <i class="icon-material-outline-access-time"></i> 15
-                            Minute Ago
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <span class="list-apply-button ripple-effect"
-                      >Browse Job <i class="icon-line-awesome-bullhorn"></i
-                    ></span>
-                  </div>
-                </a>
-                <a
-                  href="single-job-page.html"
-                  class="utf-job-listing utf-apply-button-item"
-                >
-                  <div class="utf-job-listing-details">
-                    <div class="utf-job-listing-company-logo">
-                      <img src="~/assets/images/company_logo_2.png" alt="" />
-                    </div>
-                    <div class="utf-job-listing-description">
-                      <span
-                        class="dashboard-status-button utf-job-status-item green"
-                        ><i class="icon-material-outline-business-center"></i>
-                        Full Time</span
-                      >
-                      <h3 class="utf-job-listing-title">
-                        PHP Developer, Team of PHP & IT Co
-                        <span
-                          class="utf-verified-badge"
-                          title="Verified"
-                          data-tippy-placement="top"
-                        ></span>
-                      </h3>
-                      <div class="utf-job-listing-footer">
-                        <ul>
-                          <li>
-                            <i class="icon-feather-briefcase"></i> UI/UX
-                            Designer
-                          </li>
-                          <li>
-                            <i
-                              class="icon-material-outline-account-balance-wallet"
-                            ></i>
-                            $35000-$38000
-                          </li>
-                          <li>
-                            <i class="icon-material-outline-location-on"></i>
-                            Drive Potsdam, NY 676
-                          </li>
-                          <li>
-                            <i class="icon-material-outline-access-time"></i> 25
-                            Minute Ago
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <span class="list-apply-button ripple-effect"
-                      >Browse Job <i class="icon-line-awesome-bullhorn"></i
-                    ></span>
-                  </div>
-                </a>
-                <a
-                  href="single-job-page.html"
-                  class="utf-job-listing utf-apply-button-item"
-                >
-                  <div class="utf-job-listing-details">
-                    <div class="utf-job-listing-company-logo">
-                      <img src="~/assets/images/company_logo_3.png" alt="" />
-                    </div>
-                    <div class="utf-job-listing-description">
-                      <span
-                        class="dashboard-status-button utf-job-status-item yellow"
-                        ><i class="icon-material-outline-business-center"></i>
-                        Part Time</span
-                      >
-                      <h3 class="utf-job-listing-title">
-                        Website Developer & Software Developer
-                      </h3>
-                      <div class="utf-job-listing-footer">
-                        <ul>
-                          <li>
-                            <i class="icon-feather-briefcase"></i> Software
-                            Developer
-                          </li>
-                          <li>
-                            <i
-                              class="icon-material-outline-account-balance-wallet"
-                            ></i>
-                            $35000-$38000
-                          </li>
-                          <li>
-                            <i class="icon-material-outline-location-on"></i>
-                            Drive Potsdam, NY 676
-                          </li>
-                          <li>
-                            <i class="icon-material-outline-access-time"></i> 38
-                            Minute Ago
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <span class="list-apply-button ripple-effect"
-                      >Browse Job <i class="icon-line-awesome-bullhorn"></i
-                    ></span>
-                  </div>
-                </a>
-                <a
-                  href="single-job-page.html"
-                  class="utf-job-listing utf-apply-button-item"
-                >
-                  <div class="utf-job-listing-details">
-                    <div class="utf-job-listing-company-logo">
-                      <img src="~/assets/images/company_logo_4.png" alt="" />
-                    </div>
-                    <div class="utf-job-listing-description">
-                      <span
-                        class="dashboard-status-button utf-job-status-item green"
-                        ><i class="icon-material-outline-business-center"></i>
-                        Full Time</span
-                      >
-                      <h3 class="utf-job-listing-title">
-                        Application Developer & Web Designer
-                        <span
-                          class="utf-verified-badge"
-                          title="Verified"
-                          data-tippy-placement="top"
-                        ></span>
-                      </h3>
-                      <div class="utf-job-listing-footer">
-                        <ul>
-                          <li>
-                            <i class="icon-feather-briefcase"></i> Web Developer
-                          </li>
-                          <li>
-                            <i
-                              class="icon-material-outline-account-balance-wallet"
-                            ></i>
-                            $35000-$38000
-                          </li>
-                          <li>
-                            <i class="icon-material-outline-location-on"></i>
-                            Drive Potsdam, NY 676
-                          </li>
-                          <li>
-                            <i class="icon-material-outline-access-time"></i> 55
-                            Minute Ago
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <span class="list-apply-button ripple-effect"
-                      >Browse Job <i class="icon-line-awesome-bullhorn"></i
-                    ></span>
-                  </div>
-                </a>
-                <a
-                  href="single-job-page.html"
-                  class="utf-job-listing utf-apply-button-item"
-                >
-                  <div class="utf-job-listing-details">
-                    <div class="utf-job-listing-company-logo">
-                      <img src="~/assets/images/company_logo_5.png" alt="" />
-                    </div>
-                    <div class="utf-job-listing-description">
-                      <span
-                        class="dashboard-status-button utf-job-status-item green"
-                        ><i class="icon-material-outline-business-center"></i>
-                        Full Time</span
-                      >
-                      <h3 class="utf-job-listing-title">
-                        IT Department Manager & Blogger-Entrepenour
-                      </h3>
-                      <div class="utf-job-listing-footer">
-                        <ul>
-                          <li>
-                            <i class="icon-feather-briefcase"></i> Android
-                            Developer
-                          </li>
-                          <li>
-                            <i
-                              class="icon-material-outline-account-balance-wallet"
-                            ></i>
-                            $35000-$38000
-                          </li>
-                          <li>
-                            <i class="icon-material-outline-location-on"></i>
-                            Drive Potsdam, NY 676
-                          </li>
-                          <li>
-                            <i class="icon-material-outline-access-time"></i> 1
-                            Days Ago
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <span class="list-apply-button ripple-effect"
-                      >Browse Job <i class="icon-line-awesome-bullhorn"></i
-                    ></span>
-                  </div>
-                </a>
-                <a
-                  href="single-job-page.html"
-                  class="utf-job-listing utf-apply-button-item"
-                >
-                  <div class="utf-job-listing-details">
-                    <div class="utf-job-listing-company-logo">
-                      <img src="~/assets/images/company_logo_6.png" alt="" />
-                    </div>
-                    <div class="utf-job-listing-description">
-                      <span
-                        class="dashboard-status-button utf-job-status-item green"
-                        ><i class="icon-material-outline-business-center"></i>
-                        Full Time</span
-                      >
-                      <h3 class="utf-job-listing-title">
-                        Frontend/Backendd Developer
-                      </h3>
-                      <div class="utf-job-listing-footer">
-                        <ul>
-                          <li>
-                            <i class="icon-feather-briefcase"></i> IOS Developer
-                          </li>
-                          <li>
-                            <i
-                              class="icon-material-outline-account-balance-wallet"
-                            ></i>
-                            $35000-$38000
-                          </li>
-                          <li>
-                            <i class="icon-material-outline-location-on"></i>
-                            Drive Potsdam, NY 676
-                          </li>
-                          <li>
-                            <i class="icon-material-outline-access-time"></i> 1
-                            Days Ago
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <span class="list-apply-button ripple-effect"
-                      >Browse Job <i class="icon-line-awesome-bullhorn"></i
-                    ></span>
-                  </div>
-                </a>
+                  <div class="square circle"></div>
+                </div>
+
+                <div class="skeleton-right flex2 col-9">
+                  <div class="line h17 w40 m10"></div>
+                  <div class="line"></div>
+
+                  <div class="line w75"></div>
+                </div>
               </div>
+
+              <div class="skeleton row">
+                <div
+                  class="skeleton-left flex1 col-3"
+                  style="width: 5rem; overflow: hidden"
+                >
+                  <div class="square circle"></div>
+                </div>
+
+                <div class="skeleton-right flex2 col-9">
+                  <div class="line h17 w40 m10"></div>
+                  <div class="line"></div>
+
+                  <div class="line w75"></div>
+                </div>
+              </div>
+            </div>
+
+          <div class="" v-else>
+          <jobs_list   v-for="job in jobs"
+              :key="job.id"
+              
+               :jobs1="{job}"/>
+          </div>
+          </div>
+
+  
               <div class="utf-centered-button margin-top-10">
                 <a
                   href="jobs-list-layout-leftside.html"
@@ -315,8 +77,24 @@
 </template>
 
 <script>
+import jobs_list from '~/components/job/jobs_list.vue';
 export default {
-
+  components: { jobs_list },
+data() {
+    return {
+      jobs: [],
+      categories: [],
+      isLoading: false,
+    };
+  },
+  async fetch() {
+    this.isLoading = true;
+    this.jobs = await fetch("https://job.habeshawimart.com/api/latest-jobs").then((res) =>
+      res.json()
+    );
+   
+    this.isLoading = false;
+  },
 }
 </script>
 

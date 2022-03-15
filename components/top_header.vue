@@ -22,24 +22,26 @@
               <div class="clearfix"></div>
             </div>
 
-            <div class="utf-right-side">
-              <div class="utf-header-widget-item">
+            <div class="utf-right-side" >
+
+              <div class="utf-header-widget-item" v-if="!this.$store.state.addOne.isLoging">
                 <a
                   href="#utf-signin-dialog-block"
                   class="popup-with-zoom-anim log-in-button"
                   ><i class="icon-feather-log-in"></i> <span>Sign In</span></a
                 >
               </div>
-              <div class="utf-header-widget-item">
+
+              <div class="utf-header-widget-item" v-else>
                 <div class="utf-header-notifications user-menu ">
                   <div
                     class="utf-header-notifications-trigger user-profile-title"
                   >
                     <a href="#">
                       <div class="user-avatar status-online">
-                        <img src="~/assets/images/user_small_1.jpg" alt="" />
+                        <img :src="userProfile" alt="" style="width:100%; height:100"/>
                       </div>
-                      <div class="user-name">Hi, John!</div>
+                      <div class="user-name" style=" text-transform: capitalize; " >  {{ userName }} </div>
                     </a>
                   </div>
                   <div class="utf-header-notifications-dropdown-block">
@@ -104,8 +106,43 @@
 </template>
 
 <script>
+ 
 export default {
-
+   computed: {
+        apples() {
+        this.$store.dispatch('getisLogin')
+         console.log('computed....')
+        },
+    },
+  //     async fetch() {
+  //        console.log('fetch....')
+  //      await this.$store.dispatch('getisLogin')
+    
+  // },
+    data() {
+    return {
+      isLoging2:false,
+      userName:"ff",
+      userToken:"",
+      userProfile:"",
+      
+    }
+  },
+  async beforeMount() {
+    // this.isLoging2 = this.$store.dispatch('getisLogin')
+    
+    console.log('mounting..............f')
+     
+      // this.$store.dispatch('getisLogin')
+ 
+  
+    this.userName = localStorage.getItem("auth.name");
+        this.userProfile = localStorage.getItem("auth.profile");
+    this.userToken = localStorage.getItem("auth.token");
+    console.log('localstorage11111')
+    
+     
+  },
 }
 </script>
 
